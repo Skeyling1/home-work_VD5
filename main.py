@@ -3,12 +3,15 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def films():
-    return render_template("index.html")
+def home():
+    # context = {
+    #     "title" : "Йога-центр \"Гармония\""
+    # }
+    return render_template("home.html") #**context)
 
-@app.route("/person/")
-def person():
-    return render_template("main.html")
+@app.route("/about/")
+def about():
+    return render_template("about.html")
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     app.run()
